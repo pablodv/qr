@@ -27,10 +27,15 @@ gem 'spring',        group: :development
 
 # Use to generate QR code images
 gem 'rqrcode_png'
-
 # Use elegant backends for website administration.
 gem 'activeadmin', github: 'activeadmin'
+# The lady gem for Authentication
+gem 'devise'
+# Use  handling images and other attachments
+gem 'dragonfly', '~> 1.0.7'
 
-group :development, :test do
+group :test do
   gem 'rspec-rails', '~> 3.0.0'
+  # Collection of testing matchers
+  gem 'shoulda-matchers', group: :development
 end
