@@ -24,5 +24,11 @@ module Qr
     config.generators.stylesheets = false
     config.generators.javascripts = false
     config.generators.helper = false
+
+    # Setup Rspec generator
+    config.generators do |g|
+      g.test_framework :rspec
+    end
+
   end
 end

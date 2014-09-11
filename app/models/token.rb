@@ -1,8 +1,16 @@
 class Token < ActiveRecord::Base
   dragonfly_accessor :qr_code
 
+  # == Associations
+  #
+  has_one :user
+
+  # == Validations
+  #
   validates :code, :qr_code, presence: true
 
+  # == Callbacks
+  #
   before_validation :generate_qr_code
 
   protected
