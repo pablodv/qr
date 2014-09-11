@@ -65,16 +65,20 @@ ActiveRecord::Schema.define(version: 20140911174527) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "address"
     t.string   "phone"
     t.date     "dob"
     t.integer  "token_id"
-    t.boolean  "allergic",                            null: false
-    t.boolean  "asthmatic",                           null: false
-    t.boolean  "celiac",                              null: false
-    t.boolean  "diabetic",                            null: false
+    t.boolean  "allergic"
+    t.boolean  "asthmatic"
+    t.boolean  "celiac"
+    t.boolean  "diabetic"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

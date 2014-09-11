@@ -33,6 +33,8 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 # Use  handling images and other attachments
 gem 'dragonfly', '~> 1.0.7'
+# Use Slim generator
+gem "slim-rails"
 
 group :test do
   gem 'rspec-rails', '~> 3.0.0'
