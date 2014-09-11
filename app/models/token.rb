@@ -13,6 +13,12 @@ class Token < ActiveRecord::Base
   #
   before_validation :generate_qr_code
 
+  # == Scopes
+  #
+  scope :available_by_code, ->(code) do
+    where("code = ? AND id NOT IN(?)", code, User.with_token.map(&:token_id))
+  end
+
   protected
 
   def generate_qr_code
